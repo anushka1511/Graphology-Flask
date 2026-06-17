@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi Handwriting Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function updateFileName() {
+            var input = document.getElementById('image');
+            var fileName = input.files[0] ? input.files[0].name : 'No file chosen';
+            document.getElementById('file-name').textContent = fileName;
+        }
+    </script>
+</head>
+<body>
+    <h1>Hindi Handwriting Analysis</h1>
+    <p>Upload a photo of your handwriting to determine your personality trait.</p>
+
+    <!-- Form to upload an image -->
+    <form action="{{ url_for('process_hindi_image') }}" method="post" enctype="multipart/form-data">
+        <label for="image" class="custom-file-upload">
+            Select an image
+        </label>
+        <input type="file" id="image" name="image" accept="image/*" required onchange="updateFileName()">
+        <span id="file-name">No file chosen</span>
+        <button type="submit">Analyze</button>
+    </form>
+
+    <!-- Button to go back to the index page -->
+    <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+</body>
+</html>

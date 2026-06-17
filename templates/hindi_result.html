@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi Handwriting Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Hindi Handwriting Analysis Result</h1>
+    <p>Thank you for submitting your handwriting sample. Here is the result:</p>
+    
+    <div class="result">
+        <p>{{ result }}</p> <!-- Display the result here -->
+    </div>
+    
+    <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+</body>
+</html>

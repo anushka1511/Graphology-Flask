@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Feature Coming Soon!</h1>
+    <p>We're working on this feature. Stay tuned!</p>
+
+    <!-- Button to go back to the home page -->
+    <form action="{{ url_for('index') }}" method="GET">
+        <button type="submit">Back to Home</button>
+    </form>
+</body>
+</html>

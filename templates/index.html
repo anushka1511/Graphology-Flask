@@ -1,0 +1,43 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airwriting Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Airwriting Analysis</h1>
+    <p>Welcome to the Airwriting Analysis app! Click the button below to start capturing your handwriting.</p>
+    <form action="{{ url_for('start_capture') }}" method="post">
+        <button type="submit">Start Capture</button>
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwriting Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Handwriting Analysis</h1>
+    <p>Welcome to the Handwriting Analysis app! Please select a language to start capturing your handwriting.</p>
+
+    <!-- Buttons for English and Hindi -->
+    <div class="button-container">
+        <!-- English Button: Directly submit to start_capture with POST -->
+        <form action="{{ url_for('english_selection') }}" method="get">
+            <button type="submit" class="english-btn">English</button>
+        </form>
+
+        <!-- Hindi Button: Submit to language_selection with POST -->
+        <form action="{{ url_for('language_selection', language='hindi') }}" method="post">
+            <button type="submit" class="hindi-btn">Hindi</button>
+        </form>
+    </div>
+</body>
+</html>
