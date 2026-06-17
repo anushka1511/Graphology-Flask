@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Heading Styles */
+h1 {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Button Container Styles */
+.button-container {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    justify-content: center;
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Custom Button Colors */
+.english-btn {
+    background-color: #007bff;
+}
+
+.hindi-btn {
+    background-color: #007bff;
+}
+
+.english-btn:hover {
+    background-color: #0056b3;
+}
+
+.hindi-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Link Styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Preformatted Text Styles (for results) */
+pre {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    white-space: pre-wrap; /* Wrap long text */
+    word-wrap: break-word; /* Wrap long words */
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+/* Hide the default file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Custom file upload button */
+.custom-file-upload {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
